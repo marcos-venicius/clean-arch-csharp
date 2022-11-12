@@ -24,11 +24,7 @@ namespace CleanArchMvc.Domain.Entities
 
         public void Update(string name, string description, decimal price, int stock, string image, int categoryId)
         {
-            DomainExceptionValidation.When(categoryId <= 0, "Invalid category id");
-
-            CategoryId = categoryId;
-
-            ValidateDomain(name, description, price, stock, image);
+            ValidateDomain(name, description, price, stock, image, categoryId);
         }
 
         private void ValidateDomain(string name, string description, decimal price, int stock, string image)
@@ -43,13 +39,22 @@ namespace CleanArchMvc.Domain.Entities
 
             DomainExceptionValidation.When(stock < 0, "Invalid stock value");
 
-            DomainExceptionValidation.When(image.Length > 250, "Invalid image name. too long, maximum 250 characters");
+            DomainExceptionValidation.When(image is not null && image.Length > 250, "Invalid image name. too long, maximum 250 characters");
 
             Name = name;
             Description = description;
             Price = price;
             Stock = stock;
             Image = image;
+        }
+
+        private void ValidateDomain(string name, string description, decimal price, int stock, string image, int categoryId)
+        {
+            ValidateDomain(name, description, price, stock, image);
+
+            DomainExceptionValidation.When(categoryId <= 0, "Invalid category id");
+
+            CategoryId = categoryId;
         }
 
         public int CategoryId { get; set; }
