@@ -1,3 +1,4 @@
+using CleanArchMvc.Infra.Data;
 using CleanArchMvc.Infra.IoC;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -25,6 +26,12 @@ namespace CleanArchMvc.WebUI
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            if (env.IsDevelopment())
+            {
+                // seed db only on develop mode
+                app.ApplicationServices.Seed();
+            }
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
