@@ -1,5 +1,4 @@
 ﻿using CleanArchMvc.Domain.Entities;
-using CleanArchMvc.Infra.Data.EntitiesConfiguration;
 using Microsoft.EntityFrameworkCore;
 
 namespace CleanArchMvc.Infra.Data.Context
@@ -17,12 +16,7 @@ namespace CleanArchMvc.Infra.Data.Context
         {
             base.OnModelCreating(modelBuilder);
 
-            // apply configuration by reflection
-            // modelBuilder.ApplyConfigurationsFromAssembly(typeof(ApplicationDbContext).Assembly);
-
-            // apply configuration manualy
-            modelBuilder.ApplyConfiguration(new CategoryConfiguration());
-            modelBuilder.ApplyConfiguration(new ProductConfiguration());
+            modelBuilder.ApplyConfigurationsFromAssembly(typeof(ApplicationDbContext).Assembly);
         }
     }
 }
