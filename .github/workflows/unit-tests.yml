@@ -1,7 +1,4 @@
-# This workflow will build a .NET project
-# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-net
-
-name: .NET Tests
+name: Unit Tests
 
 on:
   push:
@@ -18,12 +15,15 @@ jobs:
 
       with:
         dotnet-version: 5.0
+
     - name: Restore dependencies
       working-directory: ./CleanArchMvc
       run: dotnet restore
-    - name: Build
+
+    - name: Build Solution
       working-directory: ./CleanArchMvc
       run: dotnet build --no-restore
-    - name: Run tests
+
+    - name: Run Domain Unit Tests
       working-directory: ./CleanArchMvc
-      run: dotnet test --no-build --verbosity normal
+      run: dotnet test ./CleanArchMvc.Domain.Tests\ --no-build --verbosity m
