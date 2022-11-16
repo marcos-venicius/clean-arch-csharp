@@ -1,7 +1,7 @@
-﻿@model IEnumerable<CleanArchMvc.Application.DTOs.CategoryDTO>
+﻿@model IEnumerable<CleanArchMvc.Application.DTOs.ProductDTO>
 
 @{
-    ViewData["Title"] = "Categories Management";
+    ViewData["Title"] = "Products Management";
 }
 
 <style>
@@ -32,6 +32,12 @@
             <th>
                 @Html.DisplayNameFor(model => model.Name)
             </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Price)
+            </th>
             <th></th>
         </tr>
     </thead>
@@ -41,6 +47,12 @@
             <tr>
                 <td>
                     @Html.DisplayFor(_ => item.Name)
+                </td>
+                <td style="max-width: 20%;">
+                    @Html.DisplayFor(_ => item.Description)
+                </td>
+                <td>
+                    @Html.DisplayFor(_ => item.Price)
                 </td>
                 <td align="right" style="display: flex; gap: 1.25rem;">
                     <a asp-action="Edit" asp-route-id="@item.Id" title="Edit" class="btn btn-warning">
