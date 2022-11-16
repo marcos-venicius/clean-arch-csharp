@@ -26,4 +26,4 @@ jobs:
 
     - name: Run Domain Unit Tests
       working-directory: ./CleanArchMvc
-      run: dotnet test ./CleanArchMvc.Domain.Tests\ --no-build --verbosity m
+      run: dotnet test ./CleanArchMvc.Domain.Tests/CleanArchMvc.Domain.Tests.csproj --no-build --verbosity m
