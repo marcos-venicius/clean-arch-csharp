@@ -2,6 +2,14 @@
 
 A clean arch project to learn more about many archtecture concepts
 
+<br />
+<br />
+<div align="center">
+
+[![Unit Tests](https://github.com/marcos-venicius/clean-arch-csharp/actions/workflows/unit-tests.yml/badge.svg)](https://github.com/marcos-venicius/clean-arch-csharp/actions/workflows/unit-tests.yml)
+
+</div>
+
 ## Important
 
 - all commits from [@devone-software-solutions](https://github.com/devone-software-solutions) was created by me, i just forgot to change my `user.name` and `user.email` from my git config
