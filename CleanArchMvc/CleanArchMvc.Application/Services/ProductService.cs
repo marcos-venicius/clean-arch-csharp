@@ -1,4 +1,7 @@
-﻿using AutoMapper;
+﻿using System.Collections.Generic;
+using System.Threading.Tasks;
+
+using AutoMapper;
 
 using CleanArchMvc.Application.CQRS.Products.Commands;
 using CleanArchMvc.Application.CQRS.Products.Queries;
@@ -6,9 +9,6 @@ using CleanArchMvc.Application.DTOs;
 using CleanArchMvc.Application.Interfaces;
 
 using MediatR;
-
-using System.Collections.Generic;
-using System.Threading.Tasks;
 
 namespace CleanArchMvc.Application.Services
 {

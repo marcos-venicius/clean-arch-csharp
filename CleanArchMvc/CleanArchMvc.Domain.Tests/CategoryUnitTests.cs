@@ -1,10 +1,11 @@
+using System;
+
 using CleanArchMvc.Domain.Entities;
 using CleanArchMvc.Domain.Validation;
 
-using Xunit;
 using FluentAssertions;
 
-using System;
+using Xunit;
 
 
 namespace CleanArchMvc.Domain.Tests

@@ -3,8 +3,9 @@
 using CleanArchMvc.Domain.Entities;
 using CleanArchMvc.Domain.Validation;
 
-using Xunit;
 using FluentAssertions;
+
+using Xunit;
 
 
 namespace CleanArchMvc.Domain.Tests

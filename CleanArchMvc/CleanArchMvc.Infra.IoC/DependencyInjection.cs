@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Reflection;
 
 using CleanArchMvc.Application.Interfaces;
 using CleanArchMvc.Application.Mappings;
