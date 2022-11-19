@@ -1,4 +1,5 @@
 ﻿using CleanArchMvc.Domain.Entities;
+
 using Microsoft.EntityFrameworkCore;
 
 namespace CleanArchMvc.Infra.Data.Context

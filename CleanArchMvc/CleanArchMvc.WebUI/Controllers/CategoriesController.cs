@@ -1,6 +1,8 @@
-﻿using CleanArchMvc.Application.Interfaces;
+﻿using System.Threading.Tasks;
+
+using CleanArchMvc.Application.Interfaces;
+
 using Microsoft.AspNetCore.Mvc;
-using System.Threading.Tasks;
 
 namespace CleanArchMvc.WebUI.Controllers
 {

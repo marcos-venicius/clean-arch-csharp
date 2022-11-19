@@ -1,9 +1,11 @@
-﻿using CleanArchMvc.Domain.Entities;
+﻿using System;
+using System.Linq;
+
+using CleanArchMvc.Domain.Entities;
 using CleanArchMvc.Infra.Data.Context;
+
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
-using System;
-using System.Linq;
 
 namespace CleanArchMvc.Infra.Data
 {
